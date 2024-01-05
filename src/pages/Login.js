@@ -19,11 +19,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-<<<<<<< HEAD
       const response = await axios.post('{baseUrl}/login', {
-=======
-        const response = await axios.post('{baseUrl}/login', {
->>>>>>> 9d342d6a60b397f7c658a97260d3f4c9c8e828ae
         email,
         password,
       });
