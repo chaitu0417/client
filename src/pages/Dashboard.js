@@ -17,7 +17,7 @@ import {
     ResponsiveContainer
 } from 'recharts';
 
-const baseUrl= "https://backendbookings.onrender.com/";
+const baseUrl= "https://backendbookings.onrender.com";
 
 const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#AF19FF'];
 

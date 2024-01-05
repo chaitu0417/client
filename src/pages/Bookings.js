@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import '../styles/booking.css'; // Import CSS file for styling
-const baseUrl= "https://backendbookings.onrender.com/";
+const baseUrl= "https://backendbookings.onrender.com";
 
 const BookingManagementPage = () => {
     const [bookings, setBookings] = useState([]);
