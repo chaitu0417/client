@@ -35,6 +35,11 @@ const Login = () => {
       // Handle login error display
     }
   };
+ const handletag = (e) => 
+  {
+    e.preventDefault();
+    navigate('/register');
+  }
 
   return (
     <div>
@@ -62,8 +67,7 @@ const Login = () => {
         </div>
         <button type="submit">Login</button>
       </form>
-      <p class="center-text">Don't have an account? <a href="/register">Register</a></p>
-
+      <p class="center-text">Don't have an account? <a onClick={handletag}>Register</a></p>
 
 
 
