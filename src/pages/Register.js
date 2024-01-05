@@ -70,10 +70,9 @@ const Register = () => {
         </div>
         <button type="submit">Register</button>
       </form>
-      <p class="center-text">Already have an account? <Link href="/">Login</Link></p>
+      <p class="center-text">Already have an account? <a href="/">Login</a></p>
 
     </div>
   );
 };
-
 export default Register;

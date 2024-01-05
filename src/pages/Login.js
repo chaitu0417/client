@@ -19,7 +19,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('{baseUrl}/login', {
+      const response = await axios.post(`${baseUrl}/login`, {
         email,
         password,
       });
@@ -62,7 +62,7 @@ const Login = () => {
         </div>
         <button type="submit">Login</button>
       </form>
-      <p class="center-text">Don't have an account? <Link href="/register">Register</Link></p>
+      <p class="center-text">Don't have an account? <a href="/register">Register</a></p>
 
 
 

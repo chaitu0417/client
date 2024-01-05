@@ -14,7 +14,7 @@ const BookingManagementPage = () => {
         try {
             const fetchParams = Object.keys(filterParams).length > 0 ? filterParams : {};
 
-            const bookingsResponse = await axios.get('{baseUrl}/api/admin/bookings', {
+            const bookingsResponse = await axios.get(`${baseUrl}/api/admin/bookings`, {
                 params: fetchParams,
             });
             const bookingsData = bookingsResponse.data.bookings;
