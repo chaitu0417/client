@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import '../styles/auth.css';
+const baseUrl= "https://backendbookings.onrender.com/";
 const Login = () => {
   const [formData, setFormData] = useState({
     email: '',
@@ -18,7 +19,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/users/login', {
+      const response = await axios.post('{baseUrl}/login', {
         email,
         password,
       });

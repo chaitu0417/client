@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import '../styles/auth.css';
+const baseUrl= "https://backendbookings.onrender.com/";
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -20,7 +21,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/users/register', {
+      await axios.post('{baseUrl}/register', {
         name,
         email,
         password,

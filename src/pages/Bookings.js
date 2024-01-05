@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import '../styles/booking.css'; // Import CSS file for styling
+const baseUrl= "https://backendbookings.onrender.com/";
 
 const BookingManagementPage = () => {
     const [bookings, setBookings] = useState([]);
@@ -13,7 +14,7 @@ const BookingManagementPage = () => {
         try {
             const fetchParams = Object.keys(filterParams).length > 0 ? filterParams : {};
 
-            const bookingsResponse = await axios.get('http://localhost:5000/api/admin/bookings', {
+            const bookingsResponse = await axios.get('{baseUrl}/api/admin/bookings', {
                 params: fetchParams,
             });
             const bookingsData = bookingsResponse.data.bookings;

@@ -17,6 +17,8 @@ import {
     ResponsiveContainer
 } from 'recharts';
 
+const baseUrl= "https://backendbookings.onrender.com/";
+
 const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#AF19FF'];
 
 const Dashboard = () => {
@@ -42,14 +44,14 @@ const Dashboard = () => {
                 Authorization: `Bearer ${token}`,
             };
             const uniqueDoctorsResponse = await axios.get(
-                'http://localhost:5000/api/admin/unique-doctors',
+                '{baseUrl}/api/admin/unique-doctors',
                 { headers }
             );
             const uniqueDoctorsData = uniqueDoctorsResponse.data;
             setUniqueDoctorCount(uniqueDoctorsData);  // Set the count of unique doctors
 
             const bookingsByDoctorResponse = await axios.get(
-                'http://localhost:5000/api/admin/bookings-by-doctor',
+                '{baseUrl}/api/admin/bookings-by-doctor',
                 { headers }
             );
             const bookingsByDoctorData = bookingsByDoctorResponse.data;
@@ -78,7 +80,7 @@ const Dashboard = () => {
                 Authorization: `Bearer ${token}`,
             };
             const totalEarningsResponse = await axios.get(
-                'http://localhost:5000/api/admin/total-earnings-all-doctors',
+                '{baseUrl}/api/admin/total-earnings-all-doctors',
                 { headers }
             );
             const totalEarningsData = totalEarningsResponse.data;
@@ -94,7 +96,7 @@ const Dashboard = () => {
                 Authorization: `Bearer ${token}`,
             };
             const earningsByDoctorResponse = await axios.get(
-                'http://localhost:5000/api/admin/total-earnings-by-doctor',
+                '{baseUrl}/api/admin/total-earnings-by-doctor',
                 { headers }
             );
             const earningsByDoctorData = earningsByDoctorResponse.data;
@@ -109,7 +111,7 @@ const Dashboard = () => {
               Authorization: `Bearer ${token}`,
           };
           const topEarningDoctorsResponse = await axios.get(
-              'http://localhost:5000/api/admin/top-earning-doctors',
+              '{baseUrl}/api/admin/top-earning-doctors',
               { headers }
           );
           const topEarningDoctorsData = topEarningDoctorsResponse.data;
@@ -124,7 +126,7 @@ const Dashboard = () => {
             Authorization: `Bearer ${token}`,
         };
         const serviceCategoriesResponse = await axios.get(
-            'http://localhost:5000/api/admin/service-categories-by-doctor',
+            '{baseUrl}/api/admin/service-categories-by-doctor',
             { headers }
         );
         const serviceCategoriesData = serviceCategoriesResponse.data;
@@ -139,7 +141,7 @@ const fetchEarningsByServiceCategoryByDoctor = async (token) => {
           Authorization: `Bearer ${token}`,
       };
       const earningsResponse = await axios.get(
-          'http://localhost:5000/api/admin/earnings-by-service-category-by-doctor',
+          '{baseUrl}/api/admin/earnings-by-service-category-by-doctor',
           { headers }
       );
       const earningsData = earningsResponse.data;
