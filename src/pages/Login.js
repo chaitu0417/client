@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import '../styles/auth.css';
 const baseUrl= "https://backendbookings.onrender.com";
 const Login = () => {
@@ -62,7 +62,7 @@ const Login = () => {
         </div>
         <button type="submit">Login</button>
       </form>
-      <p class="center-text">Don't have an account? <a href="/register">Register</a></p>
+      <p class="center-text">Don't have an account? <Link href="/register">Register</Link></p>
 
 
 
