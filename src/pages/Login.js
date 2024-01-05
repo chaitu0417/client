@@ -19,11 +19,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-<<<<<<< HEAD
       const response = await axios.post('{baseUrl}/login', {
-=======
-      const response = await axios.post('https://server-k4yx.onrender.com/api/users/login', {
->>>>>>> 761c32525e0020b6b2519cea05c679b50b20692b
         email,
         password,
       });
